@@ -67,8 +67,8 @@ if(isset($_SESSION['username'])){
 
         <div class="content">
             <h3>welcome to our <span>StoryVerse</span></h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur minus aut, in maiores quidem </p>
-            <a href="#" class="btn">learn more</a>
+            <p>Embark on a Journey of Wonder and Adventure: Explore the Boundless Worlds of StoryVerse!</p>
+            <!-- <a href="#" class="btn">learn more</a> -->
         </div>
 
         <div class="image">
@@ -99,9 +99,9 @@ if(isset($_SESSION['username'])){
 
             <div class="content">
                 <h3>Exploring, Growing, And Thriving Together</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam amet nam distinctio sunt facilis, quia accusamus sapiente at quod iure ea commodi? Labore, culpa! Voluptates delectus magni atque suscipit earum.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam amet nam distinctio sunt facilis, quia accusamus sapiente at quod iure ea commodi? Labore, culpa! Voluptates delectus magni atque suscipit earum.</p>
-                <a href="#" class="btn">read more</a>
+                <p align="justify">Welcome to StoryVerse, where enchanting worlds and thrilling adventures await! Our mission is simple: to captivate young hearts and minds with an exciting array of interactive games and captivating stories.At StoryVerse, we understand the importance of sparking creativity and curiosity in children. That's why we've curated a diverse range of entertainment options, including engaging audio, mesmerizing video, and delightful text stories, suitable for kids of all ages.</p>
+                <p align="justify">Every click on StoryVerse is a gateway to endless fun and discovery. Whether your child loves solving puzzles, listening to exciting tales, or watching animated adventures, there's something here for everyone.Join us at StoryVerse, where the magic of storytelling comes to life, and unforgettable memories are made!</p>
+                <!-- <a href="#" class="btn">read more</a> -->
             </div>
 
         </div>
@@ -120,19 +120,19 @@ if(isset($_SESSION['username'])){
 
             <div class="box">
                 <h3>Audio & music Stories</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio ration</p>
+                <p>Listen to seamless audio and music content.</p>
                 <a href="audio.php"><img src="images/education1.png" alt=""></a>
             </div>
 
             <div class="box">
                 <h3>Video audio Stories</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio ration</p>
+                <p>Enjoy the stories visually with your child.</p>
                 <a href="video.php"><img src="images/captured_4.png" alt=""></a>
             </div>
 
             <div class="box">
                 <h3>Read Stories</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio ration</p>
+                <p>Improve your child's vocabulary by reading interesting stories.</p>
                 <a href="stories.php"><img src="images/education3.png" alt=""></a>
             </div>
 
@@ -140,9 +140,10 @@ if(isset($_SESSION['username'])){
 
     </section>
 
+
     <!-- education section ends -->
 
-    <!-- teacher section starts -->
+    <!-- teacher section starts 
 
     <section class="teacher" id="teacher">
 
@@ -187,9 +188,10 @@ if(isset($_SESSION['username'])){
 
     </section>
 
-    <!-- teacher section ends -->
+   teacher section ends -->
 
     <!-- activities section starts -->
+
 
     <section id="games" class="activities">
 
@@ -198,13 +200,13 @@ if(isset($_SESSION['username'])){
         <div class="box-container">
 
             <div class="box">
-                <a href="Games/game1.html"><img src="images/game2.jpg" alt=""></a>
-                <h3>games and fun</h3>
+                <a href="Games/game1.html"><img src="Games/whack_a_mole.png" alt=""></a>
+                <h3>Whack a Mole</h3>
             </div>
 
             <div class="box">
-                <a href="Games/game2.html"><img src="images/game2.jpg" alt=""></a>
-                <h3>games and fun</h3>
+                <a href="Games/game2.html"><img src="Games/tic_tac_toe.png" alt=""></a>
+                <h3>Tic Tac Toe</h3>
             </div>
 
             <div class="box">
@@ -275,18 +277,18 @@ if(isset($_SESSION['username'])){
 
         <div class="icons-container">
 
-            <div class="icons">
+            <!-- <div class="icons">
                 <i class="fas fa-clock"></i>
                 <h3>opening hours :</h3>
                 <p>mon - thurs: 08:00 am to 12:30 pm</p>
                 <p>friday: 09:00 am to 12:00 pm</p>
-            </div>
+            </div> -->
 
             <div class="icons">
                 <i class="fas fa-envelope"></i>
                 <h3>email</h3>
-                <p>ninjashub4@gmail.com</p>
-                <p>ninjashub4@gmail.com</p>
+                <p>mayank.kulkarni29@gmail.com</p>
+                <p>manasi.pandit7@gmail.com</p>
             </div>
 
             <div class="icons">
@@ -331,25 +333,18 @@ if(isset($_SESSION['username'])){
         <div class="box-container">
 
             <div class="box">
-                <h3> <i class="fas fa-school"></i> Kindergarten </h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo, unde</p>
+                <h3> <i class="fas fa-school"></i> Storyverse </h3>
+                <p>Explore The Boundless Worlds Of StoryVerse!</p>
             </div>
 
-            <div class="box">
-                <h3>quick links</h3>
-                <a href="#"> <i class="fas fa-caret-right"></i> enroll now</a>
-                <a href="#"> <i class="fas fa-caret-right"></i> parent portal</a>
-                <a href="#"> <i class="fas fa-caret-right"></i> school calendar</a>
-                <a href="#"> <i class="fas fa-caret-right"></i> lunch menu</a>
-                <a href="#"> <i class="fas fa-caret-right"></i> school supply list</a>
-            </div>
+            
 
             <div class="box">
                 <h3>category</h3>
                 <a href="#"> <i class="fas fa-caret-right"></i> about us</a>
-                <a href="#"> <i class="fas fa-caret-right"></i> academics</a>
-                <a href="#"> <i class="fas fa-caret-right"></i> admissions</a>
-                <a href="#"> <i class="fas fa-caret-right"></i> news & events</a>
+                <a href="#"> <i class="fas fa-caret-right"></i> latest updates</a>
+                <a href="#"> <i class="fas fa-caret-right"></i> events</a>
+                <a href="#"> <i class="fas fa-caret-right"></i> news</a>
                 <a href="#"> <i class="fas fa-caret-right"></i> contact us</a>
             </div>
 
@@ -364,7 +359,7 @@ if(isset($_SESSION['username'])){
 
         </div>
 
-        <div class="credit"> &copy; copyright @ 2023 by <span>ninjashub</span></div>
+        <div class="credit"> &copy; copyright @ 2024 by <span>AI Aces</span></div>
 
     </section>
 

@@ -31,7 +31,7 @@ if(isset($_SESSION['username'])){
             <a href="#about">about</a>
             <a href="#education">Kids Stories</a>
             <a href="#games">Games</a>
-            <a href="#gallery">gallery</a>
+            <a href="#gallery">Compose</a>
             <a href="#contact">contact</a>
         </nav>
 

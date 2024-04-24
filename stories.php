@@ -77,21 +77,17 @@
         </div>
     </div>
     <script>
-       $(document).ready(function () {
-        $(".read-story").click(function () {
-        var storyContent = $(this).siblings(".story-content").text();
-        var msg = new SpeechSynthesisUtterance();
-        msg.text = storyContent;
-        window.speechSynthesis.speak(msg);
-        alert(storyContent); // You can replace this with any other action you want
-
-        // Stop reading the story when the alert is closed
-        msg.onend = function() {
-            window.speechSynthesis.cancel();
-        };
-    });
-});
-
+        $(document).ready(function () {
+            $(".read-story").click(function () {
+                var storyContent = $(this).siblings(".story-content").text();
+                var msg = new SpeechSynthesisUtterance();
+                msg.text = storyContent;
+                window.speechSynthesis.speak(msg);
+                alert(storyContent);
+                window.speechSynthesis.cancel(); // Stop reading the story
+            });
+        });
     </script>
+
 </body>
 </html>

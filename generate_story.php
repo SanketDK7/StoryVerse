@@ -43,6 +43,9 @@
             color: #fff;
             cursor: pointer;
         }
+        p{
+            color: black;
+        }
 
         #generated_story {
             background-color: #fff;
@@ -67,7 +70,7 @@
         <input type="submit" value="Generate Story">
     </form>
 
-    <div id="generated_story" style=""></div>
+    
     
     <script>
         function insertGeneratedStory() {

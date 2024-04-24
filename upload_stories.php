@@ -1,4 +1,10 @@
 <?php
+session_start();
+if(!isset($_SESSION['adminlogin'])){
+    header('location:login.php');
+} ?>
+<?php
+
 // Check if the form was submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
     // Database connection parameters

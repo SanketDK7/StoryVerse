@@ -14,6 +14,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
+    if($username1 == "admin" && $password1 == "admin"){
+        session_start();
+        $_SESSION['adminlogin'] = "admin";
+        header("Location: admin.php");
+        exit();
+    }
     $sql = "SELECT * FROM users WHERE username='$username1' AND password='$password1'";
     $result = $conn->query($sql);
     $sql2="SELECT name FROM users WHERE username='$username1' AND password='$password1'";

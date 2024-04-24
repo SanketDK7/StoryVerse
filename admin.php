@@ -110,7 +110,7 @@ label {
 
         <div class="upload-section">
             <label for="story">Upload Text Story:</label> 
-            <a href="./stories.php" class="upload-button text">Upload</a>
+            <a href="./story_upload.html" class="upload-button text">Upload</a>
         </div>
 
         <a href="./logout.php" class="logout-button">Logout</a>

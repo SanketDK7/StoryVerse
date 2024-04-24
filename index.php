@@ -1,3 +1,9 @@
+<?php
+session_start();
+$name = "";
+if(isset($_SESSION['username'])){
+    $name = $_SESSION['username'];
+} ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,8 +36,17 @@
         </nav>
 
         <div class="icons">
-            <div class="fas fa-user" id="login-btn"></div>
-            <div class="fas fa-bars" id="menu-btn"></div>
+            <?php
+            if($name == ""){ ?>
+            <a href="login.php" class="nav-link px-lg-3 py-3 py-lg-4"><div class="fas fa-user" id="login-b"></div></a>
+            <?php } else { ?>
+                <div class="fas fa-user" id="login-b"><?php echo "   ".$name; ?></div>
+            <a href="logout.php" class="nav-link px-lg-3 py-3 py-lg-4"><div class="fas fa-sign-out-alt" id="logout-b"></div></a>
+            <?php } ?>
+            
+            <!--
+            <a class="nav-link px-lg-3 py-3 py-lg-4" href="logout.php"><div class="fas fa-sign-out-alt" id="logout-b"></div></a> -->
+
         </div>
 
         <form action="" class="login-form">

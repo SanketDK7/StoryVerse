@@ -1,3 +1,13 @@
+<?php
+$name = "";
+session_start();
+if(!isset($_SESSION['username'])){
+    header('location:login.php');
+}
+else{
+    $name = $_SESSION['username'];
+
+} ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,87 +15,123 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Story Generator Form</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <!--<style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            padding: 20px;
-        }
+    
+    <link rel="stylesheet" href="style.css">
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(to bottom right, #ffccff, #99ccff); /* Gradient background */
+        padding: 20px;
+    }
 
-        h2 {
-            text-align: center;
-            color: #333;
-        }
+    h2 {
+        text-align: center;
+        color: #333; /* Dark heading color */
+        font-size: 28px; /* Increased font size */
+    }
 
-        form {
-            margin-bottom: 20px;
-        }
+    form {
+        margin-bottom: 20px;
+    }
 
-        label {
-            font-weight: bold;
-            color: #555;
-        }
+    label {
+        font-weight: bold;
+        color: #333; /* Dark label color */
+        font-size: 18px; /* Increased font size */
+    }
 
-        textarea,
-        input[type="number"],
-        input[type="submit"] {
-            width: 100%;
-            padding: 10px;
-            margin-top: 5px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            box-sizing: border-box;
-        }
+    textarea,
+    input[type="number"],
+    input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+        font-size: 16px; /* Increased font size */
+    }
 
-        input[type="submit"] {
-            background-color: #007bff;
-            color: #fff;
-            cursor: pointer;
-        }
-        p{
-            color: black;
-        }
+    input[type="submit"] {
+        background-color: #ff6699; /* Pink submit button */
+        color: #fff;
+        cursor: pointer;
+    }
 
-        #generated_story {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
+    p {
+        color: #333; /* Dark text color */
+        font-size: 18px; /* Increased font size */
+    }
 
-        pre {
-            white-space: pre-wrap;
-            word-wrap: break-word;
-        }
-    </style>-->
+    #generated_story {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    pre {
+        white-space: pre-wrap;
+        word-wrap: break-word;
+    }
+</style>
+
+
 </head>
 <body>
+<header class="header">
+
+<a href="#" class="logo"> <i class="fas fa-school"></i> StoryVerse</a>
+
+<nav class="navbar">
+    <a href="#home">home</a>
+    <a href="#about">about</a>
+    <a href="#education">Kids Stories</a>
+    <a href="#games">Games</a>
+    <a href="./generate_story.php">Generate Story</a>
+    <a href="#contact">contact</a>
+
+</nav>
+
+<div class="icons">
+    <?php
+    if($name == ""){ ?>
+    <a href="login.php" class="nav-link px-lg-3 py-3 py-lg-4"><div class="fas fa-user" id="login-b"></div></a>
+    <?php } else { ?>
+        <div class="fas fa-user" id="login-b"><?php echo "   ".$name; ?></div>
+    <a href="logout.php" class="nav-link px-lg-3 py-3 py-lg-4"><div class="fas fa-sign-out-alt" id="logout-b"></div></a>
+    <?php } ?>
+    
+    <!--
+    <a class="nav-link px-lg-3 py-3 py-lg-4" href="logout.php"><div class="fas fa-sign-out-alt" id="logout-b"></div></a> -->
+
+</div>
+
+
+
+</header>
+<br><br><br>
     <h2>Story Generator</h2>
-    <div class ="form-container">
     <form method="post">
         <label for="story">Tell us your story idea:</label><br>
         <textarea id="story" name="story" rows="4" cols="50"></textarea><br><br>
         <label for="word_count">Enter word count:</label><br>
         <input type="number" id="word_count" name="word_count" value="1200"><br><br>
-        
-        <button type="submit" value="Generate Story" class ="btn">
-        <svg height="24" width="24" fill="#FFFFFF" viewBox="0 0 24 24" data-name="Layer 1" id="Layer_1" class="sparkle">
-           <path d="M10,21.236,6.755,14.745.264,11.5,6.755,8.255,10,1.764l3.245,6.491L19.736,11.5l-6.491,3.245ZM18,21l1.5,3L21,21l3-1.5L21,18l-1.5-3L18,18l-3,1.5ZM19.333,4.667,20.5,7l1.167-2.333L24,3.5,21.667,2.333,20.5,0,19.333,2.333,17,3.5Z"></path>
-        </svg>
-        <span class ="text">Generate</span>
-    </button>
+        <input type="submit" value="Generate Story">
+    </form>
 
-    </form> 
+    
+    
     <script>
         function insertGeneratedStory() {
             var generatedStoryDiv = document.getElementById("generated_story");
             generatedStoryDiv.innerHTML = generatedStory;
         }
+
         window.onload = insertGeneratedStory;
     </script>
-    </div>
+
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $story = $_POST["story"];

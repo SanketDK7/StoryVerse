@@ -5,12 +5,12 @@
     justify-content: center;
     align-items: center;
     height: 100%;
-   
+    margin-top: 200px;
 }
 
 .form {
     border: 1px solid black;
-   
+    padding: 20px;
     background: linear-gradient(0deg, #aea873, #b8842c);
 }
 
@@ -18,7 +18,7 @@
     display: block;
     margin-bottom: 5px;
     color:#e6dcdc;
-    font-size:50px;
+    font-size: 37px;
 }
 
 .form textarea,

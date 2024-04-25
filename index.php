@@ -31,8 +31,9 @@ if(isset($_SESSION['username'])){
             <a href="#about">about</a>
             <a href="#education">Kids Stories</a>
             <a href="#games">Games</a>
-            <a href="#gallery">Compose</a>
+            <a href="Compose/generate.php">Generate Story</a>
             <a href="#contact">contact</a>
+
         </nav>
 
         <div class="icons">
@@ -49,13 +50,7 @@ if(isset($_SESSION['username'])){
 
         </div>
 
-        <form action="" class="login-form">
-            <h3>login now</h3>
-            <input type="email" placeholder="your email" class="box">
-            <input type="password" placeholder="your password" class="box">
-            <p>forget your password <a href="#">click here</a> </p>
-            <input type="submit" value="login now" class="btn">
-        </form>
+        
 
     </header>
 
@@ -141,56 +136,7 @@ if(isset($_SESSION['username'])){
     </section>
 
 
-    <!-- education section ends -->
-
-    <!-- teacher section starts 
-
-    <section class="teacher" id="teacher">
-
-        <h1 class="heading">our <span> teacher</span></h1>
-
-        <div class="box-container">
-
-            <div class="box">
-                <img src="images/teacher1.png" alt="">
-                <h3>john wright</h3>
-                <p>instructor</p>
-                <div class="share">
-                    <i class="fab fa-facebook-f"></i>
-                    <i class="fab fa-twitter"></i>
-                    <i class="fab fa-instagram"></i>
-                </div>
-            </div>
-
-            <div class="box">
-                <img src="images/teacher2.png" alt="">
-                <h3>john wright</h3>
-                <p>instructor</p>
-                <div class="share">
-                    <i class="fab fa-facebook-f"></i>
-                    <i class="fab fa-twitter"></i>
-                    <i class="fab fa-instagram"></i>
-                </div>
-            </div>
-
-            <div class="box">
-                <img src="images/teacher3.png" alt="">
-                <h3>john wright</h3>
-                <p>instructor</p>
-                <div class="share">
-                    <i class="fab fa-facebook-f"></i>
-                    <i class="fab fa-twitter"></i>
-                    <i class="fab fa-instagram"></i>
-                </div>
-            </div>
-
-        </div>
-
-    </section>
-
-   teacher section ends -->
-
-    <!-- activities section starts -->
+   
 
 
     <section id="games" class="activities">
@@ -288,23 +234,23 @@ if(isset($_SESSION['username'])){
 
             
 
-            <div class="box">
+            <!-- <div class="box">
                 <h3>category</h3>
                 <a href="#"> <i class="fas fa-caret-right"></i> about us</a>
                 <a href="#"> <i class="fas fa-caret-right"></i> latest updates</a>
                 <a href="#"> <i class="fas fa-caret-right"></i> events</a>
                 <a href="#"> <i class="fas fa-caret-right"></i> news</a>
                 <a href="#"> <i class="fas fa-caret-right"></i> contact us</a>
-            </div>
+            </div> -->
 
-            <div class="box">
+            <!-- <div class="box">
                 <h3>extra links</h3>
                 <a href="#"> <i class="fas fa-caret-right"></i> privacy policy</a>
                 <a href="#"> <i class="fas fa-caret-right"></i> terms of use</a>
                 <a href="#"> <i class="fas fa-caret-right"></i> site map</a>
                 <a href="#"> <i class="fas fa-caret-right"></i> FAQs</a>
                 <a href="#"> <i class="fas fa-caret-right"></i> accessibility statement</a>
-            </div>
+            </div> -->
 
         </div>
 

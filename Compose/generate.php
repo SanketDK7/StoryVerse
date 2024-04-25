@@ -5,12 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Story Generator Form</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <style>
         body {
             font-family: Arial, sans-serif;
             background-color: #f0f0f0;
             padding: 20px;
+        }
+        
+        .container {
+            width: 700px;
+            height: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
         h2 {
@@ -48,12 +58,12 @@
             color: black;
         }
 
-        #generated_story {
+        /*#generated_story {
             background-color: #fff;
             padding: 20px;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
+        }*/
 
         pre {
             white-space: pre-wrap;
@@ -61,8 +71,10 @@
         }
     </style>
 </head>
+
 <body>
     <h2>Story Generator</h2>
+    <div class ="container">
     <form method="post">
         <label for="story">Tell us your story idea:</label><br>
         <textarea id="story" name="story" rows="4" cols="50"></textarea><br><br>
@@ -75,8 +87,8 @@
         </svg>
         <span class ="text">Generate</span>
     </button>
+    <div id = "generated_story"></div>
 
-    </form> 
     <script>
         function insertGeneratedStory() {
             var generatedStoryDiv = document.getElementById("generated_story");
@@ -84,6 +96,7 @@
         }
         window.onload = insertGeneratedStory;
     </script>
+    </form>
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $story = $_POST["story"];
@@ -105,7 +118,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         ]),
         CURLOPT_HTTPHEADER => [
             "X-RapidAPI-Host: ai-story-generator.p.rapidapi.com",
-            "X-RapidAPI-Key: fbd8f4438cmshdcce3c8548a55d8p1a3530jsnf0f3967901a3",
+            "X-RapidAPI-Key: 1041e5fa95msh0346b0a3699489fp17dd75jsned695d7c18c2",
             "content-type: application/x-www-form-urlencoded"
         ],
     ]);
@@ -127,16 +140,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $cleaned_story = strip_tags($data['story']);
             
             // Print the cleaned story
-            echo "<div id='generated_story'>";
             echo "<h3>Generated Story:</h3>";
             echo "<p>" . $cleaned_story . "</p>";
-            echo "</div>";
+
         } else {
             echo "Story not found in JSON response.";
         }
     }
 }
 ?>
+</div>
 
 </body>
 </html>

@@ -21,6 +21,7 @@
             padding: 20px;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background: linear-gradient(0deg, #aea873, #b8842c);
         }
 
         h2 {
@@ -33,8 +34,9 @@
         }
 
         label {
+
             font-weight: bold;
-            color: #555;
+            color: black;
         }
 
         textarea,
@@ -58,13 +60,6 @@
             color: black;
         }
 
-        /*#generated_story {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }*/
-
         pre {
             white-space: pre-wrap;
             word-wrap: break-word;
@@ -73,7 +68,7 @@
 </head>
 
 <body>
-    <h2>Story Generator</h2>
+    <h2> <img src ="magic-wand.png">Compose your Tale</h2>
     <div class ="container">
     <form method="post">
         <label for="story">Tell us your story idea:</label><br>
@@ -140,7 +135,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $cleaned_story = strip_tags($data['story']);
             
             // Print the cleaned story
-            echo "<h3>Generated Story:</h3>";
+            echo "<h3>Your Creative Creation:</h3>";
             echo "<p>" . $cleaned_story . "</p>";
 
         } else {

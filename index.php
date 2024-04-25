@@ -31,7 +31,7 @@ if(isset($_SESSION['username'])){
             <a href="#about">about</a>
             <a href="#education">Kids Stories</a>
             <a href="#games">Games</a>
-            <a href="./generate_story.php">Generate Story</a>
+            <a href="Compose/generate.php">Generate Story</a>
             <a href="#contact">contact</a>
 
         </nav>
@@ -89,7 +89,7 @@ if(isset($_SESSION['username'])){
         <div class="row">
 
             <div class="image">
-                <img src="images/about us.png" alt="">
+                <img src="images/aboutus.png" alt="">
             </div>
 
             <div class="content">
@@ -200,7 +200,7 @@ if(isset($_SESSION['username'])){
             <div class="image">
                 <img src="images/contact.gif" alt="">
             </div>
-            
+
             <form action="send_email.php" method="post">
     <h3>get in touch</h3>
     <div class="inputBox">

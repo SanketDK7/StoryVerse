@@ -15,8 +15,7 @@
         
         .container {
             width: 700px;
-            height: 800px;
-            margin: 0 auto;
+            height: 800px;  
             background-color: #fff;
             padding: 20px;
             border-radius: 5px;
@@ -69,12 +68,14 @@
 
 <body>
     <h2> <img src ="magic-wand.png">Compose your Tale</h2>
+    <div style="display: flex; width: 1200px; 
+        height: 100px; margin-left: -200px;">
     <div class ="container">
     <form method="post">
         <label for="story">Tell us your story idea:</label><br>
         <textarea id="story" name="story" rows="4" cols="50"></textarea><br><br>
         <label for="word_count">Enter word count:</label><br>
-        <input type="number" id="word_count" name="word_count" value="1200"><br><br>
+        <input type="number" id="word_count" name="word_count" value="200"><br><br>
         
         <button type="submit" value="Generate Story" class ="btn">
         <svg height="24" width="24" fill="#FFFFFF" viewBox="0 0 24 24" data-name="Layer 1" id="Layer_1" class="sparkle">
@@ -92,59 +93,63 @@
         window.onload = insertGeneratedStory;
     </script>
     </form>
-<?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $story = $_POST["story"];
-    $word_count = $_POST["word_count"];
-    $curl = curl_init();
+        <?php
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $story = $_POST["story"];
+            $word_count = $_POST["word_count"];
+            $curl = curl_init();
 
-    curl_setopt_array($curl, [
-        CURLOPT_URL => "https://ai-story-generator.p.rapidapi.com/generate/story/v1/",
-        CURLOPT_RETURNTRANSFER => true,
-        CURLOPT_ENCODING => "",
-        CURLOPT_MAXREDIRS => 10,
-        CURLOPT_TIMEOUT => 30,
-        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-        CURLOPT_CUSTOMREQUEST => "POST",
-        CURLOPT_POSTFIELDS => http_build_query([
-            'mode'=> 'Creative',
-            'text' => $story,
-            'word_count' => $word_count
-        ]),
-        CURLOPT_HTTPHEADER => [
-            "X-RapidAPI-Host: ai-story-generator.p.rapidapi.com",
-            "X-RapidAPI-Key: 1041e5fa95msh0346b0a3699489fp17dd75jsned695d7c18c2",
-            "content-type: application/x-www-form-urlencoded"
-        ],
-    ]);
+            curl_setopt_array($curl, [
+                CURLOPT_URL => "https://ai-story-generator.p.rapidapi.com/generate/story/v1/",
+                CURLOPT_RETURNTRANSFER => true,
+                CURLOPT_ENCODING => "",
+                CURLOPT_MAXREDIRS => 10,
+                CURLOPT_TIMEOUT => 30,
+                CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+                CURLOPT_CUSTOMREQUEST => "POST",
+                CURLOPT_POSTFIELDS => http_build_query([
+                    'mode'=> 'Creative',
+                    'text' => $story,
+                    'word_count' => $word_count
+                ]),
+                CURLOPT_HTTPHEADER => [
+                    "X-RapidAPI-Host: ai-story-generator.p.rapidapi.com",
+                    "X-RapidAPI-Key: 1041e5fa95msh0346b0a3699489fp17dd75jsned695d7c18c2",
+                    "content-type: application/x-www-form-urlencoded"
+                ],
+            ]);
 
-    $response = curl_exec($curl);
-    $err = curl_error($curl);
+            $response = curl_exec($curl);
+            $err = curl_error($curl);
 
-    curl_close($curl);
+            curl_close($curl);
 
-    if ($err) {
-        echo "cURL Error #:" . $err;
-    } else {
-        // Decode JSON response
-        $data = json_decode($response, true);
-        
-        // Check if the story variable exists in the JSON
-        if (isset($data['story'])) {
-            // Remove unexpected characters from the story
-            $cleaned_story = strip_tags($data['story']);
-            
-            // Print the cleaned story
-            echo "<h3>Your Creative Creation:</h3>";
-            echo "<p>" . $cleaned_story . "</p>";
+            if ($err) {
+                echo "cURL Error #:" . $err;
+            } else {
+                // Decode JSON response
+                $data = json_decode($response, true);
+                
+                // Check if the story variable exists in the JSON
+                if (isset($data['story'])) {
+                    // Remove unexpected characters from the story
+                    $cleaned_story = strip_tags($data['story']);
+                    
+                    // Print the cleaned story
+                    echo "<h3>Your Creative Creation:</h3>";
+                    echo "<p>" . $cleaned_story . "</p>";
 
-        } else {
-            echo "Story not found in JSON response.";
+                } else {
+                    echo "Story not found in JSON response.";
+                }
+            }
         }
-    }
-}
-?>
-</div>
+        ?>
+        </div>
+        <div>
+            <img src="./story.jpg" alt="">
+        </div>
+    </div>
 
 </body>
 </html>

@@ -171,50 +171,6 @@ if(isset($_SESSION['username'])){
 
     <!-- activities section ends -->
 
-    <!-- gallery section starts -->
-
-    <section class="gallery" id="gallery">
-
-        <h1 class="heading">our <span>gallery</span></h1>
-
-        <div class="gallery-container">
-
-            <a href="images/gallery-1.jpg" class="box">
-                <img src="images/gallery-1.jpg" alt="">
-                <div class="icon"> <i class="fas fa-plus"></i></div>
-            </a>
-
-            <a href="images/gallery-2.jpg" class="box">
-                <img src="images/gallery-2.jpg" alt="">
-                <div class="icon"> <i class="fas fa-plus"></i></div>
-            </a>
-
-            <a href="images/gallery-3.jpg" class="box">
-                <img src="images/gallery-3.jpg" alt="">
-                <div class="icon"> <i class="fas fa-plus"></i></div>
-            </a>
-
-            <a href="images/gallery-4.jpg" class="box">
-                <img src="images/gallery-4.jpg" alt="">
-                <div class="icon"> <i class="fas fa-plus"></i></div>
-            </a>
-
-            <a href="images/gallery-5.jpg" class="box">
-                <img src="images/gallery-5.jpg" alt="">
-                <div class="icon"> <i class="fas fa-plus"></i></div>
-            </a>
-
-            <a href="images/gallery-6.jpg" class="box">
-                <img src="images/gallery-6.jpg" alt="">
-                <div class="icon"> <i class="fas fa-plus"></i></div>
-            </a>
-
-        </div>
-
-    </section>
-
-    <!-- gallery section ends -->
-
     <!-- contact section starts -->
 
     <section class="contact" id="contact">
@@ -244,21 +200,20 @@ if(isset($_SESSION['username'])){
             <div class="image">
                 <img src="images/contact.gif" alt="">
             </div>
-
-            <form action="https://formsubmit.co/91833dea505fe01deefa655aedd5af5e" method="POST" >
-                <h3>get in touch</h3>
-                <div class="inputBox">
-                    <input type="text" name="Name" placeholder="your name">
-                    <input type="email" name="Email" placeholder="your email">
-                </div>
-                <div class="inputBox">
-                    <input type="number" name="Contact_Number" placeholder="your number">
-                    <input type="text" name="Subject" placeholder="your subject">
-                </div>
-                <textarea placeholder="your message" name="Message" cols="30" rows="10"></textarea>
-                <input type="hidden" name="_next" value="http://localhost/StoryVerse/">
-                <input type="submit" value="send message" class="btn">
-            </form>
+            
+            <form action="send_email.php" method="post">
+    <h3>get in touch</h3>
+    <div class="inputBox">
+        <input type="text" name="name" placeholder="your name">
+        <input type="email" name="email" placeholder="your email">
+    </div>
+    <div class="inputBox">
+        <input type="tel" name="phone" placeholder="your number"> <!-- Changed type to "tel" for phone number -->
+        <input type="text" name="subject" placeholder="your subject">
+    </div>
+    <textarea name="message" placeholder="your message" cols="30" rows="10"></textarea>
+    <input type="submit" value="send message" class="btn">
+</form>
 
         </div>
 

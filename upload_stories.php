@@ -8,10 +8,10 @@ if(!isset($_SESSION['adminlogin'])){
 // Check if the form was submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
     // Database connection parameters
-    $servername = "localhost"; // Change this if your MySQL server is hosted elsewhere
-    $username = "root"; // Replace with your MySQL username
-    $password = ""; // Replace with your MySQL password
-    $database = "storyverse"; // Replace with your database name
+    $servername = "localhost";
+    $username = "root"; 
+    $password = "";
+    $database = "storyverse"; 
 
     // Create connection
     $conn = new mysqli($servername, $username, $password, $database);

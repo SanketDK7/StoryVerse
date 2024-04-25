@@ -17,7 +17,67 @@ else{
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
     
     <link rel="stylesheet" href="style.css">
-    <style>
+    <!-- <style>
+    body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(to bottom right, #ffccff, #99ccff); /* Gradient background */
+        padding: 20px;
+    }
+
+    h2 {
+        text-align: center;
+        color: #333; /* Dark heading color */
+        font-size: 28px; /* Increased font size */
+    }
+
+    form {
+        margin-bottom: 20px;
+    }
+
+    label {
+        font-weight: bold;
+        color: #333; /* Dark label color */
+        font-size: 18px; /* Increased font size */
+    }
+
+    textarea,
+    input[type="number"],
+    input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+        font-size: 16px; /* Increased font size */
+    }
+
+    input[type="submit"] {
+        background-color: #ff6699; /* Pink submit button */
+        color: #fff;
+        cursor: pointer;
+    }
+
+    p {
+        color: #333; /* Dark text color */
+        font-size: 18px; /* Increased font size */
+    }
+
+    #generated_story {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    pre {
+        white-space: pre-wrap;
+        word-wrap: break-word;
+    }
+</style> -->
+
+<style>
     body {
         font-family: Arial, sans-serif;
         background: linear-gradient(to bottom right, #ffccff, #99ccff); /* Gradient background */

@@ -94,7 +94,7 @@ if(isset($_SESSION['username'])){
         <div class="row">
 
             <div class="image">
-                <img src="images/about us.png" alt="">
+                <img src="images/aboutus.png" alt="">
             </div>
 
             <div class="content">
@@ -254,7 +254,7 @@ if(isset($_SESSION['username'])){
             <div class="image">
                 <img src="images/contact.gif" alt="">
             </div>
-            
+
             <form action="send_email.php" method="post">
     <h3>get in touch</h3>
     <div class="inputBox">

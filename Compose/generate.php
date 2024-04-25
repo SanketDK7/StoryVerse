@@ -1,3 +1,13 @@
+<?php
+$name = "";
+session_start();
+if(!isset($_SESSION['username'])){
+    header('location:../login.php');
+}
+else{
+    $name = $_SESSION['username'];
+
+} ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +16,12 @@
     <title>Story Generator Form</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
     <link rel="stylesheet" type="text/css" href="style.css">
+        <!-- font awesome cdn link  -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- lightgallery css cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css">
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="../style.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -26,6 +42,7 @@
         h2 {
             text-align: center;
             color: #333;
+            font-size: 20px;
         }
 
         form {
@@ -33,7 +50,7 @@
         }
 
         label {
-
+            font-size: 20px;
             font-weight: bold;
             color: black;
         }
@@ -67,10 +84,42 @@
 </head>
 
 <body>
+<header class="header">
+
+<a href="#" class="logo"> <i class="fas fa-school"></i> StoryVerse</a>
+
+<nav class="navbar">
+    <a href="#home">home</a>
+    <a href="#about">about</a>
+    <a href="#education">Kids Stories</a>
+    <a href="#games">Games</a>
+    <a href="./generate_story.php">Generate Story</a>
+    <a href="#contact">contact</a>
+
+</nav>
+
+<div class="icons">
+    <?php
+    if($name == ""){ ?>
+    <a href="login.php" class="nav-link px-lg-3 py-3 py-lg-4"><div class="fas fa-user" id="login-b"></div></a>
+    <?php } else { ?>
+        <div class="fas fa-user" id="login-b"><?php echo "   ".$name; ?></div>
+    <a href="logout.php" class="nav-link px-lg-3 py-3 py-lg-4"><div class="fas fa-sign-out-alt" id="logout-b"></div></a>
+    <?php } ?>
+    
+    <!--
+    <a class="nav-link px-lg-3 py-3 py-lg-4" href="logout.php"><div class="fas fa-sign-out-alt" id="logout-b"></div></a> -->
+
+</div>
+
+
+
+</header>
+<br><br><br>
     <h2> <img src ="magic-wand.png">Compose your Tale</h2>
     <div style="display: flex; width: 1200px; 
         height: 100px; margin-left: -200px;">
-    <div class ="container">
+    <div class ="container" style="flex: 2;">
     <form method="post">
         <label for="story">Tell us your story idea:</label><br>
         <textarea id="story" name="story" rows="4" cols="50"></textarea><br><br>
@@ -137,7 +186,7 @@
                     
                     // Print the cleaned story
                     echo "<h3>Your Creative Creation:</h3>";
-                    echo "<p>" . $cleaned_story . "</p>";
+                    echo "<p style:'font-size: 18px; text-align: justify;'>" . $cleaned_story . "</p>";
 
                 } else {
                     echo "Story not found in JSON response.";
@@ -146,8 +195,8 @@
         }
         ?>
         </div>
-        <div>
-            <img src="./story.jpg" alt="">
+        <div style="flex:1; margin-top: 150px;">
+            <img src="./story1.png" alt="">
         </div>
     </div>
 

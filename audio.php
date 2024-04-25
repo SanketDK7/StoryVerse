@@ -12,25 +12,29 @@ if(!isset($_SESSION['username'])){
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript" src="index.js"></script>
     <link rel="stylesheet" href="style_video.css">
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- lightgallery css cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css">
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="style.css">
     <title>Audio</title>
 </head>
 <body>
-<div>
-  <header class="d-flex flex-wrap justify-content-center py-4 mb-0 border-bottom">
-    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-      <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
-      <span class="fs-4" style="font-family: 'Poppins', sans-serif;">Story Verse</span>
-    </a>
+<header class="header">
 
-    <ul class="nav nav-pills">
-      <li class="nav-item"><a href="index.html" class="nav-link " aria-current="page">Home</a></li>
-      <li class="nav-item"><a href="index.html#about" class="nav-link">About</a></li>
-      <li class="nav-item"><a href="index.html#education" class="nav-link">Kids Stories</a></li>
-      <li class="nav-item"><a href="audio_upload.html" class="nav-link">Upload Story</a></li>
-      <li class="nav-item"><a href="index.html#gallery" class="nav-link">Gallery</a></li>
-    </ul>
-  </header>
-</div>
+<a href="./index.php" class="logo"> <i class="fas fa-school"></i> StoryVerse</a>
+
+<nav class="navbar">
+    <a href="index.php">home</a>
+    <a href="index.php#about">about</a>
+    <a href="index.php#education">Kids Stories</a>
+    <a href="index.php#games">Games</a>
+    <a href="index.#contact">contact</a>
+
+</nav>
+</header>
+<br><br><br><br>
     <div class="album py-9 bg-body-tertiary">
         <div class="container">
     

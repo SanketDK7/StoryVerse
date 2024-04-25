@@ -254,8 +254,7 @@ if(isset($_SESSION['username'])){
             <div class="image">
                 <img src="images/contact.gif" alt="">
             </div>
-
-<<<<<<< HEAD
+            
             <form action="send_email.php" method="post">
     <h3>get in touch</h3>
     <div class="inputBox">
@@ -269,23 +268,6 @@ if(isset($_SESSION['username'])){
     <textarea name="message" placeholder="your message" cols="30" rows="10"></textarea>
     <input type="submit" value="send message" class="btn">
 </form>
-
-=======
-            <form action="https://formsubmit.co/91833dea505fe01deefa655aedd5af5e" method="POST" >
-                <h3>get in touch</h3>
-                <div class="inputBox">
-                    <input type="text" name="Name" placeholder="your name">
-                    <input type="email" name="Email" placeholder="your email">
-                </div>
-                <div class="inputBox">
-                    <input type="number" name="Contact_Number" placeholder="your number">
-                    <input type="text" name="Subject" placeholder="your subject">
-                </div>
-                <textarea placeholder="your message" name="Message" cols="30" rows="10"></textarea>
-                <input type="hidden" name="_next" value="http://localhost/StoryVerse/">
-                <input type="submit" value="send message" class="btn">
-            </form>
->>>>>>> cda78398e9fdeb0bbdde96b8d502bfdf86e4d156
 
         </div>
 

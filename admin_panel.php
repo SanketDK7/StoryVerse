@@ -10,13 +10,13 @@
     <div class="container">
         <h1>Kids Website Admin Panel</h1>
         <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" enctype="multipart/form-data">
-            <label for="video">Upload Video:</label>
+            <label for="video">Video Upload:</label>
             <input type="file" name="video" id="video" accept="video/*">
-            <label for="audio">Upload Audio:</label>
+            <label for="audio">Audio Upload:</label>
             <input type="file" name="audio" id="audio" accept="audio/*">
-            <label for="story">Upload Story:</label>
+            <label for="story">Story Upload:</label>
             <input type="file" name="story" id="story" accept="application/pdf">
-            <button type="submit" name="submit">Upload</button>
+            <button type="submit" name="submit">PUSH</button>
         </form>
     </div>
 
@@ -47,6 +47,7 @@
             echo "<p>Story uploaded successfully!</p>";
         }
     }
+
     ?>
 
 </body>

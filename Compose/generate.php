@@ -89,12 +89,12 @@ else{
 <a href="#" class="logo"> <i class="fas fa-school"></i> StoryVerse</a>
 
 <nav class="navbar">
-    <a href="#home">home</a>
-    <a href="#about">about</a>
-    <a href="#education">Kids Stories</a>
-    <a href="#games">Games</a>
+    <a href="../index.php">home</a>
+    <a href="../index.php#about">about</a>
+    <a href="../index.php#education">Kids Stories</a>
+    <a href="../index.php#games">Games</a>
     <a href="./generate_story.php">Generate Story</a>
-    <a href="#contact">contact</a>
+    <a href="../index.php#contact">contact</a>
 
 </nav>
 
@@ -147,7 +147,8 @@ else{
             $story = $_POST["story"];
             $word_count = $_POST["word_count"];
             $curl = curl_init();
-
+            $story='Write the story for this kids for given subject and make the story attractive so which can attract the small kids to read the story
+            ;'.$story;
             curl_setopt_array($curl, [
                 CURLOPT_URL => "https://ai-story-generator.p.rapidapi.com/generate/story/v1/",
                 CURLOPT_RETURNTRANSFER => true,
